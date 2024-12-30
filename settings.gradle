@@ -16,6 +16,13 @@ pluginManagement {
         maven { url=uri ("https://maven.aliyun.com/repository/gradle-plugin")}
         maven { url=uri ("https://maven.aliyun.com/repository/public")}
     }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'org.greenrobot.greendao') {
+                useModule('org.greenrobot:greendao-gradle-plugin:3.3.1')
+            }
+        }
+    }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

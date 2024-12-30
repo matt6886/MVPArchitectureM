@@ -23,6 +23,7 @@ rxjava2Version = '2.0.6'
 rxandroidVersion = '2.0.1'
 butterKnifeVersion = '8.8.1'
 greenDaoVersion = '3.2.0'
+greenDaoPluginVersion = "3.2.1"
 placeholderviewVersion = '0.6.1'
 debugDBVersion = '1.0.3'
 timberVersion = '4.5.1'
@@ -61,4 +62,6 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersi
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+# database greendao
+greendao-plugin = { id = "org.greenrobot.greendao", version.ref = "greenDaoPluginVersion" }
 
