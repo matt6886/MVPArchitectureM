@@ -14,14 +14,14 @@ gsonVersion = '2.8.0'
 calligraphyVersion = '2.2.0'
 glideVersion = '3.7.0'
 
-rx2FastAndroidNetworking = '1.0.1'
+rx2FastAndroidNetworking = '1.0.4'
 
 dagger2Version = '2.15'
 javaxAnnotation = '1.0'
 javaxInject = '1'
 rxjava2Version = '2.0.6'
 rxandroidVersion = '2.0.1'
-butterKnifeVersion = '8.6.0'
+butterKnifeVersion = '8.8.1'
 greenDaoVersion = '3.2.0'
 placeholderviewVersion = '0.6.1'
 debugDBVersion = '1.0.3'
@@ -42,7 +42,22 @@ dragger2 = {group = "com.google.dagger", name = "dagger", version.ref = "dagger2
 dragger2-compiler = {group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger2Version"}
 javax-annotation = {group = "javax.annotation", name = "jsr250-api", version.ref = "javaxAnnotation"}
 javax-inject = {group = "javax.inject", name = "javax.inject", version.ref = "javaxInject"}
-
+# reactive
+rxjava2 = {group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjava2Version"}
+rxAndroid = {group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroidVersion"}
+# database
+greendao = { group = "org.greenrobot", name = "greendao", version.ref = "greenDaoVersion" }
+# code generate for view
+#butterknife = { group = "com.jakewharton", name = "butterknife", version.ref = "butterKnifeVersion" }
+#butterknife-processor = { group = "com.jakewharton", name = "butterknife-compiler", version.ref = "butterKnifeVersion" }
+# network
+fastanrdroidnetwork = { group = "com.github.amitshekhariitbhu.Fast-Android-Networking", name = "android-networking", version.ref = "rx2FastAndroidNetworking" }
+# image
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
+# place holder view
+placeholderview = { group = "com.mindorks", name = "placeholderview", version.ref = "placeholderviewVersion" }
+# parser
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

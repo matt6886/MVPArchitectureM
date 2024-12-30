@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -37,9 +37,25 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-
+    // dependency injection
     implementation libs.dragger2
     annotationProcessor libs.dragger2.compiler
     compileOnly libs.javax.annotation
     implementation libs.javax.inject
+    // reactive
+    implementation libs.rxjava2
+    implementation libs.rxAndroid
+    // database
+    implementation libs.greendao
+    // code generate for view
+//    implementation libs.butterknife
+//    annotationProcessor libs.butterknife.processor
+    // network
+    implementation libs.fastanrdroidnetwork
+    // image
+    implementation libs.glide
+    // place holder view
+    implementation libs.placeholderview
+    // parser
+    implementation libs.gson
 }
