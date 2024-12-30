@@ -1,0 +1,49 @@
+[versions]
+agp = "8.7.3"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+
+# App dependencies versions
+supportLibraryVersion = '26.1.0'
+gsonVersion = '2.8.0'
+calligraphyVersion = '2.2.0'
+glideVersion = '3.7.0'
+
+rx2FastAndroidNetworking = '1.0.1'
+
+dagger2Version = '2.15'
+javaxAnnotation = '1.0'
+javaxInject = '1'
+rxjava2Version = '2.0.6'
+rxandroidVersion = '2.0.1'
+butterKnifeVersion = '8.6.0'
+greenDaoVersion = '3.2.0'
+placeholderviewVersion = '0.6.1'
+debugDBVersion = '1.0.3'
+timberVersion = '4.5.1'
+
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+# App dependencies libaries
+# dependency injection
+dragger2 = {group = "com.google.dagger", name = "dagger", version.ref = "dagger2Version"}
+dragger2-compiler = {group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger2Version"}
+javax-annotation = {group = "javax.annotation", name = "jsr250-api", version.ref = "javaxAnnotation"}
+javax-inject = {group = "javax.inject", name = "javax.inject", version.ref = "javaxInject"}
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
