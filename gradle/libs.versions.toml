@@ -14,7 +14,7 @@ gsonVersion = '2.8.0'
 calligraphyVersion = '2.2.0'
 glideVersion = '3.7.0'
 
-rx2FastAndroidNetworking = '1.0.4'
+rx2FastAndroidNetworking = '1.0.1'
 
 dagger2Version = '2.15'
 javaxAnnotation = '1.0'
@@ -52,7 +52,7 @@ greendao = { group = "org.greenrobot", name = "greendao", version.ref = "greenDa
 #butterknife = { group = "com.jakewharton", name = "butterknife", version.ref = "butterKnifeVersion" }
 #butterknife-processor = { group = "com.jakewharton", name = "butterknife-compiler", version.ref = "butterKnifeVersion" }
 # network
-fastanrdroidnetwork = { group = "com.github.amitshekhariitbhu.Fast-Android-Networking", name = "android-networking", version.ref = "rx2FastAndroidNetworking" }
+fastanrdroidnetwork = { group = "com.amitshekhar.android", name = "rx2-android-networking", version.ref = "rx2FastAndroidNetworking" }
 # image
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
 # place holder view
