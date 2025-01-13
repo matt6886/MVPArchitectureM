@@ -3,9 +3,9 @@ package com.matt.mvparchitecturem.ui.base;
 import androidx.annotation.StringRes;
 
 public interface MvpView {
-//    void showLoading();
-//
-//    void hideLoading();
+    void showLoading();
+
+    void hideLoading();
 //
 //    void openActivityOnTokenExpire();
 //

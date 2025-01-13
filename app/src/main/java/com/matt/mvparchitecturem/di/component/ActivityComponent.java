@@ -2,6 +2,7 @@ package com.matt.mvparchitecturem.di.component;
 
 import com.matt.mvparchitecturem.di.PerActivity;
 import com.matt.mvparchitecturem.di.module.ActivityModule;
+import com.matt.mvparchitecturem.ui.login.LoginActivity;
 import com.matt.mvparchitecturem.ui.splash.SplashActivity;
 
 import dagger.Component;
@@ -10,4 +11,6 @@ import dagger.Component;
 @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
     void inject(SplashActivity activity);
+
+    void inject(LoginActivity activity);
 }

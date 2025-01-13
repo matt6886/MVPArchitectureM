@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.matt.mvparchitecturem.di.ActivityContext;
 import com.matt.mvparchitecturem.di.PerActivity;
+import com.matt.mvparchitecturem.ui.login.LoginMvpPresenter;
+import com.matt.mvparchitecturem.ui.login.LoginMvpView;
+import com.matt.mvparchitecturem.ui.login.LoginPresenter;
 import com.matt.mvparchitecturem.ui.splash.SplashMvpPresenter;
 import com.matt.mvparchitecturem.ui.splash.SplashMvpView;
 import com.matt.mvparchitecturem.ui.splash.SplashPresenter;
@@ -45,6 +48,14 @@ public class ActivityModule {
     @PerActivity
     SplashMvpPresenter<SplashMvpView> provideSplashPresenter(
             SplashPresenter<SplashMvpView> presenter
+    ) {
+        return presenter;
+    }
+
+    @Provides
+    @PerActivity
+    LoginMvpPresenter<LoginMvpView> provideLoginPresenter(
+            LoginPresenter<LoginMvpView> presenter
     ) {
         return presenter;
     }

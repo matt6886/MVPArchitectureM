@@ -6,6 +6,9 @@ plugins {
 android {
     namespace 'com.matt.mvparchitecturem'
     compileSdk 34
+    viewBinding {
+        enabled true
+    }
 
     defaultConfig {
         applicationId "com.matt.mvparchitecturem"
@@ -27,7 +30,7 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "BASE_URL", "\"http://www.mocky.io/v2\"")
+            buildConfigField("String", "BASE_URL", "\"https://run.mocky.io/v3\"")
             buildConfigField("String", "API_KEY", "\"ABCXYZ123TEST\"")
         }
         release {

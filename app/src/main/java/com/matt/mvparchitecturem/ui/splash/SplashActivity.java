@@ -1,5 +1,6 @@
 package com.matt.mvparchitecturem.ui.splash;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -11,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.matt.mvparchitecturem.R;
 import com.matt.mvparchitecturem.ui.base.BaseActivity;
+import com.matt.mvparchitecturem.ui.login.LoginActivity;
+import com.matt.mvparchitecturem.ui.main.MainActivity;
 
 import javax.inject.Inject;
 
@@ -37,6 +40,15 @@ public class SplashActivity extends BaseActivity implements SplashMvpView {
 
     @Override
     public void openLoginActivity() {
-        Log.d("Matt", "openLoginActivity");
+        Intent intent = LoginActivity.getStartIntent(SplashActivity.this);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void openMainActivity() {
+        Intent intent = MainActivity.getStartIntent(SplashActivity.this);
+        startActivity(intent);
+        finish();
     }
 }

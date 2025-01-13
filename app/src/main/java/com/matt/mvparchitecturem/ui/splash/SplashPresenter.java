@@ -58,6 +58,8 @@ public class SplashPresenter<V extends SplashMvpView> extends BasePresenter<V> i
         if (getDataManager().getCurrentUserLoggedInMode()
             == DataManager.LoggedInMode.LOGGED_IN_MODE_LOGGED_OUT.getType()) {
             getMvpView().openLoginActivity();
+        } else {
+            getMvpView().openMainActivity();
         }
     }
 }

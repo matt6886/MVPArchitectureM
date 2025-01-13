@@ -1,5 +1,6 @@
 package com.matt.mvparchitecturem.ui.base;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -14,9 +15,11 @@ import com.matt.mvparchitecturem.R;
 import com.matt.mvparchitecturem.di.component.ActivityComponent;
 import com.matt.mvparchitecturem.di.component.DaggerActivityComponent;
 import com.matt.mvparchitecturem.di.module.ActivityModule;
+import com.matt.mvparchitecturem.utils.CommonUtils;
 
 public abstract class BaseActivity extends AppCompatActivity implements MvpView {
     private ActivityComponent mActivityComponent;
+    private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,10 +49,23 @@ public abstract class BaseActivity extends AppCompatActivity implements MvpView 
     }
 
     private void showSnackBar(String message) {
-        Snackbar snackbar = Snackbar.make(findViewById(com.google.android.material.R.id.content), message, Snackbar.LENGTH_SHORT);
+        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_SHORT);
         View sbView = snackbar.getView();
         TextView textView = sbView.findViewById(com.google.android.material.R.id.snackbar_text);
         textView.setTextColor(ContextCompat.getColor(this, R.color.white));
         snackbar.show();
+    }
+
+    @Override
+    public void showLoading() {
+        hideLoading();
+        mProgressDialog = CommonUtils.showLoadingDialog(this);
+    }
+
+    @Override
+    public void hideLoading() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.cancel();
+        }
     }
 }
